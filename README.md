@@ -10,7 +10,6 @@ Copy	----------------->	ljohn_ops
 
 
 
-zabbix微信报警：
+zabbix微信报警：在当前目录的zabbix下，安装文档在其他目录。
 
-[TOC]
 
