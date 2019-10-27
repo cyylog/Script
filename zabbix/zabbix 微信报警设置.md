@@ -135,7 +135,7 @@ echo
 
 
 
-![img](./img./zabbix创建媒介类型.png)
+![img](./img/zabbix创建媒介类型.png)
 
 
 
