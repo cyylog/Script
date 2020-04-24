@@ -6,7 +6,7 @@
 
 ##### 1.获取企业ID
 
-![img](./img/企业信息截图.png)
+![J0OeUI.png](https://s1.ax1x.com/2020/04/24/J0OeUI.png)
 
 
 
@@ -14,19 +14,17 @@
 
 这里要先点通讯录创建一个部门，然后再点应用小程序创建应用，填写logo、名称、和选择部门就可以了
 
-
-
-![img](./img/企业微信机器人截图.png)
+[![J0Om5t.png](https://s1.ax1x.com/2020/04/24/J0Om5t.png)](https://imgchr.com/i/J0Om5t)
 
 
 
 ##### 3.获取用户账号
 
-![1572151609951](./img/获取用户账号1.png)
+![J0OYan.png](https://s1.ax1x.com/2020/04/24/J0OYan.png)
 
 
 
-![1572151613016](./img/获取用户账号2.png)
+![J0OaGV.png](https://s1.ax1x.com/2020/04/24/J0OaGV.png)
 
 ##### 4.测试gentId,和Secret
 
@@ -38,11 +36,11 @@
 
 
 
-![img](./img/企业微信接口测试1截图.png)
+![J0OyZ9.png](https://s1.ax1x.com/2020/04/24/J0OyZ9.png)
 
 
 
-![img](./img/企业微信接口测试2截图.png)
+![J0O2Px.png](https://s1.ax1x.com/2020/04/24/J0O2Px.png)
 
 ### 二、调用的shell脚本方式，脚本如下：
 
@@ -52,7 +50,7 @@
 
 
 
-![img](./img/企业微信部门ID截图.png)
+![J0O7dA.png](https://s1.ax1x.com/2020/04/24/J0O7dA.png)
 
 
 
@@ -135,7 +133,7 @@ echo
 
 
 
-![img](./img/zabbix创建媒介类型.png)
+[![J0X1W6.png](https://s1.ax1x.com/2020/04/24/J0X1W6.png)](https://imgchr.com/i/J0X1W6)
 
 
 
@@ -153,7 +151,7 @@ echo
 
 ##### 2.然后再设置上用户：点管理 —> 创建用户（微信报警的用户）
 
-![img](./img/zabbix创建微信报警用户1.png)
+![J0XYOe.png](https://s1.ax1x.com/2020/04/24/J0XYOe.png)
 
 
 
@@ -163,7 +161,7 @@ echo
 
 
 
-![img](./img/zabbix设置报警媒介.png)
+![J0XaTA.png](https://s1.ax1x.com/2020/04/24/J0XaTA.png)
 
 
 
