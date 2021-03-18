@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Author: cyy
+# Author: cyylog
 # Email: cyylog@aliyun.com
 # Date: 2019/09/25
 # Wechat alert script for zabbix
