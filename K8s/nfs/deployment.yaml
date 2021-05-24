@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nfs-client-provisioner
+  labels:
+    app: nfs-client-provisioner
+  # replace with namespace where provisioner is deployed
+  namespace: default      # 与 abac 文件中的 namespace 保持一致
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: nfs-client-provisioner
+  template:
+    metadata:
+      labels:
+        app: nfs-client-provisioner
+    spec:
+      serviceAccountName: nfs-client-provisioner
+      containers:
+        - name: nfs-client-provisioner
+          image: k8s.gcr.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
+          volumeMounts:
+            - name: nfs-client-root
+              mountPath: /persistentvolumes
+          env:
+            - name: PROVISIONER_NAME
+              value: k8s-sigs.io/nfs-subdir-external-provisioner    # provisioner名称,请确保该名称与 class.yaml文件中的provisioner名称保持一致
+            - name: NFS_SERVER
+              value: 192.168.0.129         # NFS Server IP地址
+            - name: NFS_PATH
+              value: /data/nfs              # NFS 挂载卷
+      volumes:
+        - name: nfs-client-root
+          nfs:
+            server: 192.168.0.129     # NFS Server IP地址
+            path: /dta/nfs          #  NFS 挂载卷
