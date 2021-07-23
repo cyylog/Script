@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: cephfs
+  namespace: test
+spec:
+#  storageClassName: "rbd"
+  accessModes:
+      - ReadWriteMany
+  resources:
+      requests:
+        storage: 8Gi

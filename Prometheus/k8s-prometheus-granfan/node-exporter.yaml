@@ -1,0 +1,63 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: node-exporter
+  namespace: test
+  labels:
+    name: node-exporter
+spec:
+  template:
+    metadata:
+      labels:
+        name: node-exporter
+    spec:
+      hostPID: true
+      hostIPC: true
+      hostNetwork: true
+      containers:
+      - name: node-exporter
+        image: prom/node-exporter
+        ports:
+        - containerPort: 9100
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
+        securityContext:
+          privileged: true
+          args:
+            - --path.procfs
+            - /host/proc
+            - --path.sysfs
+            - /host/sys
+            - --collector.filesystem.ignored-mount-points
+            - '"^/(sys|proc|dev|host|etc)($|/)"'
+            volumeMounts:
+              - name: dev
+                mountPath: /host/dev
+              - name: proc
+                mountPath: /host/proc
+              - name: sys
+                mountPath: /host/sys
+              - name: rootfs
+                mountPath: /rootfs
+            tolerations:
+              - key: "node-role.kubernetes.io/master"
+                operator: "Exists"
+                effect: "NoSchedule"
+            volumes:
+              - name: proc
+                hostPath:
+                  path: /proc
+              - name: dev
+                hostPath:
+                  path: /dev
+              - name: sys
+                hostPath:
+                  path: /sys
+              - name: rootfs
+                hostPath:
+                  path: /

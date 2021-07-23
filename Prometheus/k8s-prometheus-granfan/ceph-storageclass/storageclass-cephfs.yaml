@@ -1,0 +1,12 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: dynamic-cephfs
+  namespace: test
+provisioner: ceph.com/cephfs
+parameters:
+    monitors: **********
+    adminId: admin
+    adminSecretName: ceph-secret
+    adminSecretNamespace: "test"
+    claimRoot: /test
