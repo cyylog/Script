@@ -6,6 +6,7 @@
 #
 
 ### backup mysql data
+set -u
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/mysql/bin
 d1=`date +%w`
 d2=`date +%d`
