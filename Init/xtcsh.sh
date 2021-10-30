@@ -16,6 +16,6 @@ sed -i -e '/mirrors.cloud.aliyuncs.com/d' -e '/mirrors.aliyuncs.com/d' /etc/yum.
 yum clean all
 yum makecache fast
 
-yum install -y wget ntpdate net-tools vim bash-completion ShellCheck
+yum install -y wget ntpdate net-tools vim bash-completion ShellCheck iftop sar htop 
 ntpdate -b ntp1.aliyun.com
 
